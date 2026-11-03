@@ -4,7 +4,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-R=Path(__file__).resolve().parent;d=pd.read_csv(R/comparisons.csv')
+R=Path(__file__).resolve().parent;d=pd.read_csv(R/'comparisons.csv')
 plt.rcParams.update({'font.size':10,'font.family':'DejaVu Sans','pdf.fonttype':42,'ps.fonttype':42,
                      'axes.spines.top':False,'axes.spines.right':False})
 (R/'figures').mkdir(exist_ok=True)
