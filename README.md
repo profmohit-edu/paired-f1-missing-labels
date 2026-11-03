@@ -25,7 +25,7 @@ approval reservation must be finalized after that certification.
 
 Use Python 3.12 with the pinned versions in requirements.txt. The input datasets
 are bundled with scikit-learn. Feature data are not downloaded by the scripts.
-The GitHub upload currently stores scripts and output files at the repository root (rather than in the original code/ and results/ subdirectories). The scripts still expect the original directory structure; restore those folders before running the commands below. From the repository root, run:
+The GitHub upload stores scripts and output files at the repository root (rather than in the original code/ and results/ subdirectories). The scripts have been adapted to use the flat repository layout, with prediction arrays in prediction_records/. From the repository root, run:
 
 ```bash
 python validate.py
