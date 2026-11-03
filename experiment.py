@@ -16,7 +16,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from bounds import joint_bounds,independent_bounds,certificate,f1,from_counts
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parent
 
 
 def dumpcsv(path,rows):
@@ -26,7 +26,7 @@ def dumpcsv(path,rows):
 
 def main():
     start=time.perf_counter();rows=[]; fits=[]; provenance=[]
-    pred_dir=ROOT/'results'/'prediction_records';pred_dir.mkdir(exist_ok=True)
+    pred_dir=ROOT/'prediction_records';pred_dir.mkdir(exist_ok=True)
     for name,loader in [('breast_cancer',load_breast_cancer),('wine',load_wine),('digits',load_digits)]:
         data=loader();X=data.data
         y=(data.target==0).astype(int) if name!='digits' else (data.target>=5).astype(int)
@@ -85,16 +85,16 @@ def main():
                                              upper_witness=json.dumps(r['upper_witness'],sort_keys=True)))
             np.savez_compressed(pred_dir/f'{name}_{seed:02d}.npz',**save)
         print('completed',name,flush=True)
-    dumpcsv(ROOT/'results'/'comparisons.csv',rows);dumpcsv(ROOT/'results'/'fits.csv',fits)
-    (ROOT/'results'/'provenance.json').write_text(json.dumps(provenance,indent=2))
+    dumpcsv(ROOT/'comparisons.csv',rows);dumpcsv(ROOT/'fits.csv',fits)
+    (ROOT/'provenance.json').write_text(json.dumps(provenance,indent=2))
     timings=[]
     for m in [100,1000,10000,100000]:
         c=[3*m//10,m//10,15*m//100,45*m//100]
         for repetition in range(10):
             tic=time.perf_counter();from_counts(c,pa=c[2]+c[3]+50,pb=c[1]+c[3]+60,ta=40,tb=45,s=100)
             timings.append(dict(m=m,repetition=repetition,seconds=time.perf_counter()-tic))
-    dumpcsv(ROOT/'results'/'scaling.csv',timings)
-    (ROOT/'results'/'execution.json').write_text(json.dumps(dict(comparisons=len(rows),model_fits=len(fits),
+    dumpcsv(ROOT/'scaling.csv',timings)
+    (ROOT/'execution.json').write_text(json.dumps(dict(comparisons=len(rows),model_fits=len(fits),
         seconds=time.perf_counter()-start,python=platform.python_version(),numpy=np.__version__,scipy=scipy.__version__,
         scikit_learn=sklearn.__version__,platform=platform.platform(),seed_range='0 through 29 inclusive',
         no_population_inference=True),indent=2))
