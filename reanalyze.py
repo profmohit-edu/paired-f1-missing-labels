@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from bounds import count_matched_bounds, certificate, joint_bounds
 
-R=Path(__file__).resolve().parents[1]/'results'
+R=Path(__file__).resolve().parent
 d=pd.read_csv(R/'comparisons.csv'); cache={};new=[]
 for row in d.to_dict('records'):
     key=(row['dataset'],row['seed'])
