@@ -5,7 +5,7 @@ import numpy as np
 from scipy.optimize import linprog
 from bounds import from_counts
 
-R=Path(__file__).resolve().parents[1]/'results'; rows=[]
+R=Path(__file__).resolve().parent; rows=[]
 for m in [10,25,50,100,200]:
     for rep in range(5):
         rng=np.random.default_rng([20261022,m,rep])
