@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "breast_cancer",
+    "n": 569,
+    "features": 30,
+    "positives": 212,
+    "array_sha256": "3019c221882c9c756a9b1c76da7ad72cf606ffe8e51791044aeaadeb33efbd12",
+    "positive_definition": "original class 0",
+    "loader": "load_breast_cancer",
+    "source": "bundled scikit-learn dataset; no feature-data download"
+  },
+  {
+    "dataset": "wine",
+    "n": 178,
+    "features": 13,
+    "positives": 59,
+    "array_sha256": "0a32a4ceabde1e86a3682858bedd542b488f02d79d4622d23ea89e8a6d409bb4",
+    "positive_definition": "original class 0",
+    "loader": "load_wine",
+    "source": "bundled scikit-learn dataset; no feature-data download"
+  },
+  {
+    "dataset": "digits",
+    "n": 1797,
+    "features": 64,
+    "positives": 896,
+    "array_sha256": "c420bf82f526990ddba195b5a63ef52298d83dad12c3f86e199e0e3e76008b09",
+    "positive_definition": "digit >= 5",
+    "loader": "load_digits",
+    "source": "bundled scikit-learn dataset; no feature-data download"
+  }
+]

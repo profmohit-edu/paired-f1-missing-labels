@@ -1,0 +1,12 @@
+{
+  "comparisons": 7290,
+  "model_fits": 270,
+  "seconds": 18.83669196200003,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "scikit_learn": "1.8.0",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "seed_range": "0 through 29 inclusive",
+  "no_population_inference": true
+}

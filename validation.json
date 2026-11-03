@@ -1,0 +1,8 @@
+{
+  "exhaustive_instances": 7133,
+  "lp_optimizations": 400,
+  "max_lp_absolute_error": 1.1796119636642288e-16,
+  "seconds": 2.366212328000074,
+  "status": "PASS",
+  "definition": "F1=0 when predicted-positive count plus actual-positive count is zero"
+}

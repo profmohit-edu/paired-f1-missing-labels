@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "case_rows": 7290,
+  "reconstructed_witnesses": 14580,
+  "prediction_records": 90,
+  "checked": [
+    "train/test disjointness",
+    "truth feasibility",
+    "endpoint witness scores",
+    "strict certificate signs",
+    "comparator containment",
+    "count-regime nesting",
+    "duplicate rows"
+  ]
+}
