@@ -25,15 +25,15 @@ approval reservation must be finalized after that certification.
 
 Use Python 3.12 with the pinned versions in requirements.txt. The input datasets
 are bundled with scikit-learn. Feature data are not downloaded by the scripts.
-From this directory run:
+The GitHub upload currently stores scripts and output files at the repository root (rather than in the original code/ and results/ subdirectories). The scripts still expect the original directory structure; restore those folders before running the commands below. From the repository root, run:
 
 ```bash
-python code/validate.py
-python code/experiment.py
-python code/reanalyze.py
-python code/lp_benchmark.py
-python code/check_evidence.py
-python code/figures.py
+python validate.py
+python experiment.py
+python reanalyze.py
+python lp_benchmark.py
+python check_evidence.py
+python figures.py
 ```
 
 The optional generic LP timing experiment can take longer than the main study.
@@ -56,21 +56,21 @@ The generic LP solves exactly the joint feasible problem.
 
 ## Files
 
-- code/bounds.py: specialized solver and both marginal comparators.
-- code/validate.py: exhaustive label-level and fixed-count LP verification.
-- code/experiment.py: model fitting, controlled masking, primary comparisons.
-- code/reanalyze.py: strengthened comparator and summaries.
-- code/lp_benchmark.py: equivalent whole-envelope generic LP comparison.
-- code/check_evidence.py: reconstructs and scores all endpoint witnesses.
-- code/figures.py: regenerates the three scientific figures.
-- results/comparisons.csv: all 7,290 cases, including witnesses and timings.
-- results/prediction_records/: 90 NPZ files with split indices, complete test
+- bounds.py: specialized solver and both marginal comparators.
+- validate.py: exhaustive label-level and fixed-count LP verification.
+- experiment.py: model fitting, controlled masking, primary comparisons.
+- reanalyze.py: strengthened comparator and summaries.
+- lp_benchmark.py: equivalent whole-envelope generic LP comparison.
+- check_evidence.py: reconstructs and scores all endpoint witnesses.
+- figures.py: regenerates the three scientific figures.
+- comparisons.csv: all 7,290 cases, including witnesses and timings.
+- prediction_records/: 90 NPZ files with split indices, complete test
   outcomes, frozen predictions, and each missingness mask.
-- results/provenance.json: dataset shapes, recoding and array hashes.
-- results/validation.json and evidence_audit.json: executed check results.
-- results/fits.csv, scaling.csv, lp_benchmark.csv and summary.csv: raw and
+- provenance.json: dataset shapes, recoding and array hashes.
+- validation.json and evidence_audit.json: executed check results.
+- fits.csv, scaling.csv, lp_benchmark.csv and summary.csv: raw and
   aggregated computational results.
-- audit/PROTOCOL.md: locally fixed initial study specification; not an external
+- PROTOCOL.md: locally fixed initial study specification; not an external
   preregistration.
 - audit/Review_and_Revision.md: ten simulated perspectives and editor screen;
   private internal review, not external peer review.
