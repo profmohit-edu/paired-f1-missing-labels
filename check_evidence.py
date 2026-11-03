@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-R=Path(__file__).resolve().parents[1]/'results'
+R=Path(__file__).resolve().parent
 d=pd.read_csv(R/'comparisons.csv');cache={};witnesses=0
 def score(a,y):
     den=int(a.sum()+y.sum())
