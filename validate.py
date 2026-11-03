@@ -72,4 +72,4 @@ def run(out):
     Path(out).write_text(json.dumps(result,indent=2)); print(json.dumps(result,indent=2))
 
 if __name__=='__main__':
-    run(Path(__file__).resolve().parents[1]/'results'/'validation.json')
+    run(Path(__file__).resolve().parent/'validation.json')
