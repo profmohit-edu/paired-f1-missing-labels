@@ -1,0 +1,27 @@
+{
+  "title": "Sharp bounds for paired F1 comparisons with missing evaluation labels",
+  "authors": [
+    {
+      "name": "Tripti Tiwari",
+      "affiliation": "Department of Management Studies, Bharati Vidyapeeth (Deemed to be University) Institute of Management and Research, New Delhi, India",
+      "email": "tripti.imr@gmail.com",
+      "orcid": "0000-0002-9016-1988",
+      "author_order": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Mohit Tiwari",
+      "affiliation": "Department of Computer Science and Engineering, Bharati Vidyapeeth's College of Engineering, New Delhi, India",
+      "email": "mohit.t.bvcoe@gmail.com",
+      "orcid": "0000-0003-1836-3451",
+      "author_order": 2,
+      "corresponding": true
+    }
+  ],
+  "author_order": [
+    "Tripti Tiwari",
+    "Mohit Tiwari"
+  ],
+  "journal": "Pattern Analysis and Applications",
+  "supplement_caption": "Online Resource 1. Executable solver, validation, benchmark records, masking indices, endpoint witnesses, protocol and reproduction instructions for paired finite-pool F1 bounds."
+}
